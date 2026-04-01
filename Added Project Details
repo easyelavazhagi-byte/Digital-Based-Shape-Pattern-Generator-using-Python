@@ -1,0 +1,75 @@
+Project Details :
+
+1. Project Title 
+Digital  Based Shape Pattern Generator using Python 
+
+2. Problem Statement 
+To design and develop a Python program that generates different geometric shape patterns 
+such as square, rectangle, triangle, pyramid, and circle based on user input and digit-based size. 
+
+3. Objective 
+The objective of this project is to create a pattern generator program that accepts the shape 
+name and size from the user and displays the corresponding pattern using loops and 
+conditional statements in Python. 
+
+4. Tools Used 
+Python IDLE / Python Compiler 
+
+5. Description 
+•  This project generates different geometric shape patterns. 
+•  The user enters the shape name. 
+•  The user enters the size (digit). 
+•  The program prints the selected shape pattern using loops. 
+•  Circle pattern is generated using the mathematical formula (x² + y² ≤ r²). 
+
+6. Algorithm 
+Start 
+1. Read the shape name from the user. 
+2. Read the size (digit) from the user. 
+3. If shape is square → print n × n star pattern. 
+4. If shape is rectangle → print n rows and (n+3) columns. 
+5. If shape is triangle → print increasing star pattern. 
+6. If shape is pyramid → print centered increasing pattern. 
+7. If shape is circle → use formula (x² + y² ≤ r²) to print circle pattern. 
+8. Else display invalid message. 
+9. Stop 
+
+7. Program (Python Code) 
+
+print("------ Shape Pattern Generator ------") 
+shape = input("Enter shape (square, rectangle, triangle, pyramid, circle): ").lower() 
+n = int(input("Enter size (digit): ")) 
+print("\nSize:", n) 
+print("Your shape:\n") 
+if shape == "square": 
+for i in range(n): 
+print("* " * n) 
+elif shape == "rectangle": 
+for i in range(n): 
+print("* " * (n + 3)) 
+elif shape == "triangle": 
+for i in range(1, n + 1): 
+print("* " * i) 
+elif shape == "pyramid": 
+for i in range(1, n + 1): 
+print(" " * (n - i) + "* " * i) 
+elif shape == "circle": 
+r = n 
+for i in range(-r, r + 1): 
+for j in range(-r, r + 1): 
+if i*i + j*j <= r*r: 
+print("*", end=" ") 
+else: 
+print(" ", end=" ") 
+print() 
+else: 
+print("Invalid shape name!")print("Final Bill Amount = Rs.", round (final_bill, 2)) 
+
+9. Result 
+The shape pattern generator program successfully prints different geometric patterns based 
+on user input and digit-based size using loops and conditional statements. 
+
+10.Conclusion 
+This project demonstrates how Python can be used to generate various geometric patterns 
+using conditional statements, loops, and mathematical formulas. It enhances understanding of 
+control structures and pattern logic in Python
